@@ -4,11 +4,9 @@ using namespace std;
 
 int main() {
 	long long n, x; cin >> n >> x; 
-	vector<long long> v(n), pref(n, 0);
+	vector<long long> v(n);
 	for(int i = 0; i < n; i++){
 	    cin >> v[i];
-	    if(i == 0) pref[i] = v[i];
-	    else pref[i] = pref[i - 1] + v[i];
 	}
 	long long cur_sum = 0;
 	long long cnt = 0;
